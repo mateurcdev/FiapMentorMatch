@@ -1,4 +1,3 @@
-// view/TelaCadastroView.kt
 package com.example.fiapmentormatch.view
 
 import androidx.compose.foundation.layout.Arrangement
@@ -138,11 +137,22 @@ fun salvarPerfil(
     isMentor: Boolean
 ) {
     val perfil = if (isMentor) {
-        Mentor(nome, experiencia, habilidades.split(", "), areasDeInteresse.split(", "), formacaoAcademica)
+        Mentor(
+            nome,
+            experiencia,
+            habilidades.split(", "),
+            areasDeInteresse.split(", "),
+            formacaoAcademica
+        )
     } else {
-        Aprendiz(nome, experiencia, habilidades.split(", "), areasDeInteresse.split(", "), formacaoAcademica)
+        Aprendiz(
+            nome,
+            experiencia,
+            habilidades.split(", "),
+            areasDeInteresse.split(", "),
+            formacaoAcademica
+        )
     }
 
-    // Aqui você pode salvar o perfil ou enviar para uma API mock
-    println(perfil)
+    // TODO Aqui PRECISAMOS criar a chamada para a API/Func Salvar.
 }
